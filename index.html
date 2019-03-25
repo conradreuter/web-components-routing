@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Conrad&apos;s awesome Web Components Routing experiment</title>
+</head>
+
+<body>
+  <script src="./index.js" type="module"></script>
+
+  <nav>
+    <a href="#/foo">/foo</a>
+    <a href="#/bar">/bar</a>
+    <a href="#/bar/baz">/bar/baz</a>
+    <a href="#/baz">/baz</a>
+    <a href="#/qux">/qux</a>
+  </nav>
+
+  <my-router>
+    <my-route path="/foo">
+      FOO
+    </my-route>
+    <my-route path="/bar">
+      BAR
+      <my-route path="/baz">
+        BAZ
+      </my-route>
+    </my-route>
+    <div>
+      <my-route path="/qux">
+        QUX
+      </my-route>
+    </div>
+  </my-router>
+</body>
+
+</html>
